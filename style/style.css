@@ -147,6 +147,10 @@ nav img {
     /* border-radius: 15px; */
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     transition: 0.25s;
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(112, 110, 110);
 }
 
 .pledge:hover {
@@ -221,6 +225,7 @@ nav img {
 
 .pledge_more img {
     width: 20px;
+    opacity: 0.75;
 }
 
 .links {
