@@ -116,8 +116,9 @@ nav img {
 }
 
 .tag {
-    background-color: white;
+    /* background-color: white; */
     color: black;
+    background-color: rgb(235, 235, 235);
 }
 
 .tag:hover {
@@ -165,7 +166,7 @@ nav img {
     /* padding: 20px; */
     font-size: xx-large;
     font-weight: normal;
-    color: rgb(112, 110, 110);
+    color: rgb(68, 68, 68);
     line-height: 200%;
 
     border-bottom-width: 1px;
