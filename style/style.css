@@ -84,15 +84,15 @@ nav img {
 
 #tags {
     /* width: 100%; */
-    white-space: nowrap;
-    overflow: auto;   
+    /* white-space: nowrap;
+    overflow: auto;    */
     margin: 10px;
 }
 
 #tags button {
     position: relative;
-    border: none;
     display: inline-block;
+    border: none;
     padding: 10px 10px;
     border-radius: 10px;
     /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); */
@@ -103,7 +103,7 @@ nav img {
     transition: 0.25s;
 
     margin: 5px;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     
 }
 
@@ -268,7 +268,7 @@ nav img {
 }
 
 #pledges_gotop img {
-    width: 55px;
+    width: 35px;
     opacity: 0.75;
 }
 
