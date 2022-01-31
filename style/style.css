@@ -43,15 +43,20 @@ header .title {
     font-weight: bold;
     font-size: x-large;
     color: #0042A1;
+
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #0042A1;
+    padding-left: 10px;
 }
 
-header .title_underline {
+/* header .title_underline {
     width: 34px;
     margin-top: 15px;
     border-bottom-width: 5px;
     border-bottom-style: solid;
     border-bottom-color: #0042A1;
-}
+} */
 
 header .subtitle {
     font-weight: bold;
@@ -265,21 +270,22 @@ nav img {
     border-color: lightgray;
 
     transition: 0.25s;
+    color: #00A0E2;
 }
 
 #pledges_gotop:hover {
-    background-color: #00A0E2;
+    background-color: lightgray;
 }
 
-#pledges_gotop a {
+/* #pledges_gotop a {
     text-align: center;
     color: black;
     text-decoration: none;
-}
+} */
 
 #pledges_gotop img {
     width: 35px;
-    opacity: 0.75;
+    opacity: 0.45;
 }
 
 #pledges_gotop_tags {
