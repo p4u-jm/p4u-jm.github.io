@@ -89,11 +89,12 @@ nav img {
     transition: 0.25s;
 
     margin: 5px;
-    color: black;
+    
 }
 
 .tag {
     background-color: white;
+    color: black;
 }
 
 .tag:hover {
