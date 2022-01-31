@@ -33,9 +33,22 @@ header {
     /* box-shadow: 10px 10px 10px lightgray; */
 }
 
+header a {
+    text-decoration: none;
+}
+
 header .title {
     font-weight: bold;
     font-size: x-large;
+    color: #0042A1;
+}
+
+header .title_underline {
+    width: 34px;
+    margin-top: 15px;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: #0042A1;
 }
 
 header .subtitle {
@@ -115,13 +128,13 @@ nav img {
 
 .pledge {
     margin: 10px;
-    padding: 0px;
+    /* padding: 0px; */
     background-color: white;
 
     /* position: relative; */
     border: none;
     /* display: inline-block; */
-    padding: 15px 30px;
+    padding: 5px 0px;
     /* border-radius: 15px; */
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     transition: 0.25s;
@@ -182,6 +195,10 @@ nav img {
     line-height: 180%;
 }
 
+.pledge_description {
+    color: rgb(112, 110, 110);   
+}
+
 .pledge_more {
     text-align: center;
 }
@@ -202,8 +219,8 @@ nav img {
 
 .links div {
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .links img {
