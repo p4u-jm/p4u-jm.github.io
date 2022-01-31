@@ -166,7 +166,27 @@ const moveToTop = () => {
 }
 
 const expandPledge = (index) => {
-    let element = document.getElementById("link_" + index)
+    var element = document.getElementById("link_" + index)
+
+    var index_temp  = 0
+
+    while(element) {
+        element = document.getElementById("link_" + index_temp)
+        
+        if (element) {
+            element.style.display = "none"
+        }
+        
+        element = document.getElementById("more_" + index_temp)
+        
+        if (element) {
+            element.style.display = "block"
+        }
+        
+        index_temp++
+    }
+
+    element = document.getElementById("link_" + index)
     element.style.display = "block"
 
     element = document.getElementById("more_" + index)
