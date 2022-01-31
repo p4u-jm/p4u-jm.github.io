@@ -29,7 +29,7 @@ header {
     margin-bottom: 15px;
     padding: 15px;
     background-color: white;
-    color: #2C4198;
+    color: #0042A1;
     /* box-shadow: 10px 10px 10px lightgray; */
 }
 
@@ -41,6 +41,7 @@ header .title {
 header .subtitle {
     font-weight: bold;
     font-size: large;
+    color: darkgray;
 }
 
 /* header .campaign_title {
@@ -100,7 +101,8 @@ nav img {
 
 .tag:hover {
     /* font-weight: bold; */
-    background-color: lightblue;
+    color: black;
+    background-color: darkgray;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -126,23 +128,32 @@ nav img {
 }
 
 .pledge:hover {
-    background-color: #00A0E2;  
+    /* background-color: #009ee26b;   */
+
 }
 
 #pledges_message {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 20px;
     font-size: xx-large;
-    font-weight: bold;
-    color: black;
+    font-weight: normal;
+    color: rgb(112, 110, 110);
     line-height: 200%;
+
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #cccccc;
 }
 
 #pledges_message span {
-    color: white;
-    background-color: #2C4198;
-    padding: 5px;
+    color: #00A0E2;
+    font-weight: bolder;
+    /* background-color: #2C4198; */
+    /* border-width: 3px;
+    border-style: solid;
+    border-color: #00A0E2; */
+    /* padding: 5px; */
 }
 
 .pledge_title {

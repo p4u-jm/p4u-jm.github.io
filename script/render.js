@@ -49,7 +49,7 @@ const renderTitle = (selected_tag) => {
     var title = ""
     
     if (selected_tag.trim() === "") {
-        title = `&#8220;나의 <span>[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]를</span> 위한 약속&#8221;` 
+        title = `&#8220;나의 <span>[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</span>를 위한 약속&#8221;` 
     } else {
         var header = "나의"
         let title_tag = selected_tag
@@ -60,7 +60,7 @@ const renderTitle = (selected_tag) => {
             }
         })
 
-        title = `&#8220;${header} <span>${Josa.r(title_tag, '을/를')}</span> 위한 약속&#8221;` 
+        title = `&#8220;${header} <span>${title_tag}</span>${Josa.c(title_tag, '을/를')} 위한 약속&#8221;` 
     }
 
     document.getElementById("pledges_message").innerHTML = title
