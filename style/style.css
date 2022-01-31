@@ -19,6 +19,8 @@ body {
 	border-style: none;
 	margin: auto;
 	max-width: 750px;
+
+    word-break: keep-all;
 }
 
 
@@ -170,17 +172,19 @@ nav img {
 }
 
 .pledge_title {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: x-large;
     font-weight: bold;
     text-align: center;
 }
 
-.pledge_title a {
+/* .pledge_title a {
     text-decoration: none;
     color: black;
-}
+} */
 
 .pledge_title a:hover {
     border-bottom-width: 1px;
@@ -190,7 +194,10 @@ nav img {
 
 
 .pledge_description {
+    margin-top: 5px;
     margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     line-height: 180%;
 }
