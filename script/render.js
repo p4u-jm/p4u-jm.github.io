@@ -88,7 +88,7 @@ const renderBody = (selected_tag) => {
     filterPledges(selected_tag).forEach(pledge => {
 
         var element_child = ""
-        element_child = `<div class="pledge" onclick="expandPledge(${index_element})">`
+        element_child = `<div class="pledge" id="pledge_${index_element}" onclick="expandPledge(${index_element})">`
 
         let website_url = ( pledge.website_url.trim() !== "") ? pledge.website_url : "#"
 
@@ -109,7 +109,7 @@ const renderBody = (selected_tag) => {
         if ( pledge.website_url.trim() !== "") {
 
             element_child = element_child + `
-                <div>
+                <div class="link_website">
                     <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
                         민주당 홈페이지에서 확인하기
                     </a>
@@ -153,12 +153,12 @@ const renderBody = (selected_tag) => {
 }
 
 const selectTag = (tag) => {
-    let pledges_message = document.getElementById('pledges_message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    document.getElementById('pledges_message').scrollIntoView({ behavior: 'smooth', block: 'center' });
     render(tag)
 }
 
 const moveToTop = () => {
-    let pledges_message = document.getElementById('header').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    document.getElementById('header').scrollIntoView({ behavior: 'smooth', block: 'center' });
     render(tag)
 }
 
@@ -168,6 +168,8 @@ const expandPledge = (index) => {
 
     element = document.getElementById("more_" + index)
     element.style.display = "none"
+
+    document.getElementById('pledge_' + index).scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 const reloadPage = () => {

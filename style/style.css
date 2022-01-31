@@ -225,7 +225,7 @@ nav img {
 
 .pledge_more img {
     width: 20px;
-    opacity: 0.75;
+    opacity: 0.55;
 }
 
 .links {
@@ -236,6 +236,20 @@ nav img {
     border-top-style: dotted;
     border-top-color: #cccccc;
     transition: 0.25s;
+}
+
+.link_website {
+    margin: 20px;
+    padding: 15px;
+}
+
+.link_website a {
+    text-decoration: none;
+    color: white;
+    background-color:#0B68B3;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
 }
 
 .links div {
