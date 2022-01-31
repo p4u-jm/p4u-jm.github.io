@@ -46,12 +46,13 @@ const renderTags = (tags, selected_tag) => {
 
 const renderTitle = (selected_tag) => {
     
-    if (selected_tag.trim() !== "") {
-        var title = ""
-        
-        title_tag = selected_tag
-
-        var header = ""
+    var title = ""
+    
+    if (selected_tag.trim() === "") {
+        title = `&#8220;나의 <span>[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]를</span> 위한 약속&#8221;` 
+    } else {
+        var header = "나의"
+        let title_tag = selected_tag
 
         pledges.forEach( pledge => {
             if ( pledge.category === selected_tag ) {
@@ -59,34 +60,49 @@ const renderTitle = (selected_tag) => {
             }
         })
 
-        title = `&#8220;${header} ${Josa.r(title_tag, '을/를')} 위한 약속&#8221;` 
-        document.getElementById("pledges_message").innerHTML = title
+        title = `&#8220;${header} <span>${Josa.r(title_tag, '을/를')}</span> 위한 약속&#8221;` 
     }
+
+    document.getElementById("pledges_message").innerHTML = title
+    
 
 }
 
 const renderBody = (selected_tag) => {
     var element_html = ""
+    var index_element = 0
 
     filterPledges(selected_tag).forEach(pledge => {
 
         var element_child = ""
-        element_child = `<div class="pledge">`
+        element_child = `<div class="pledge" onclick="expandPledge(${index_element})">`
 
         let website_url = ( pledge.website_url.trim() !== "") ? pledge.website_url : "#"
 
         element_child = element_child + `
-            <div class="pledge_title">
-                <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
-                    ${pledge.title}
-                </a>
+            <div class="pledge_title">    
+                ${pledge.title}
             </div>
             <div class="pledge_description">
                 ${pledge.description}
             </div>
+            <div class="pledge_more" id="more_${index_element}">
+                <img src="./img/plus.png" alt="아래로 화살표" />
+            </div>
             `
 
-        element_child = element_child + `<div class="links">`
+        element_child = element_child + `<div class="links" id="link_${index_element}" >`
+
+        if ( pledge.website_url.trim() !== "") {
+
+            element_child = element_child + `
+                <div>
+                    <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
+                        민주당 홈페이지에서 확인하기
+                    </a>
+                </div>
+                `
+        }
 
         if ( pledge.image_name.trim() !== "") {
 
@@ -116,6 +132,8 @@ const renderBody = (selected_tag) => {
         element_child = element_child + `</div>`
 
         element_html = element_html + element_child
+
+        index_element++
     })
 
     document.getElementById("pledges").innerHTML = element_html
@@ -129,4 +147,12 @@ const selectTag = (tag) => {
 const moveToTop = () => {
     let pledges_message = document.getElementById('header').scrollIntoView({ behavior: 'smooth', block: 'center' });
     render(tag)
+}
+
+const expandPledge = (index) => {
+    let element = document.getElementById("link_" + index)
+    element.style.display = "block"
+
+    element = document.getElementById("more_" + index)
+    element.style.display = "none"
 }

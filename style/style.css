@@ -25,39 +25,32 @@ body {
 header {
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 25px;
-    margin-bottom: 35px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     padding: 15px;
     background-color: white;
-
-    box-shadow: 10px 10px 10px lightgray;
-}
-
-header .subtitle {
-    font-weight: bold;
-    font-size: large;
-    /* text-align: center; */
-    color: rgb(112, 112, 112);
+    color: #2C4198;
+    /* box-shadow: 10px 10px 10px lightgray; */
 }
 
 header .title {
     font-weight: bold;
     font-size: xx-large;
-    color: rgb(112, 112, 112);
-    /* text-align: center; */
-    margin-top: 15px;
-    margin-bottom: 15px;
-    
 }
 
-header .campaign_title {
+header .subtitle {
+    font-weight: bold;
+    font-size: large;
+}
+
+/* header .campaign_title {
     border-bottom-width: 3px;
     border-bottom-color: white;
-}
+} */
 
 nav {
-    margin-top: 15px;
-    margin-bottom: 35px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     line-height: 180%;
     padding: 15px; 
     border-bottom-width: 1px;
@@ -93,12 +86,15 @@ nav {
 }
 
 .tag:hover {
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: lightblue;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 .tag_selected {
-    background-color: aqua;
+    background-color: #00A0E2;
+    color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -117,7 +113,7 @@ nav {
 }
 
 .pledge:hover {
-    background-color: aqua;  
+    background-color: #00A0E2;  
 }
 
 #pledges_message {
@@ -126,9 +122,15 @@ nav {
     padding: 20px;
     font-size: xx-large;
     font-weight: bold;
-    color: rgb(112, 112, 112);
+    color: black;
+    line-height: 200%;
 }
 
+#pledges_message span {
+    color: white;
+    background-color: #2C4198;
+    padding: 5px;
+}
 
 .pledge_title {
     margin-top: 10px;
@@ -143,21 +145,42 @@ nav {
     color: black;
 }
 
-.pledge_description {
-    margin-bottom: 15px;
-    text-align: center;
-    line-height: 180%;
-}
-
 .pledge_title a:hover {
     border-bottom-width: 1px;
     border-bottom-style: dotted;
     border-bottom-color: #cccccc;
 }
 
+
+.pledge_description {
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 180%;
+}
+
+.pledge_more {
+    text-align: center;
+}
+
+.pledge_more img {
+    width: 20px;
+    opacity: 0.75;
+}
+
 .links {
-    height: 0px;
+    /* height: 0px; */
     display: none;
+
+    border-top-width: 1px;
+    border-top-style: dotted;
+    border-top-color: #cccccc;
+    transition: 0.25s;
+}
+
+.links div {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .links img {
@@ -194,7 +217,7 @@ nav {
 }
 
 #pledges_gotop:hover {
-    background-color: aqua;
+    background-color: #00A0E2;
 }
 
 #pledges_gotop a {
