@@ -59,8 +59,8 @@ const renderTitle = (selected_tag) => {
             }
         })
 
-        title = `${header} ${Josa.r(title_tag, '을/를')} 위한 약속` 
-        document.getElementById("pledges_message").innerText = title
+        title = `&#8220;${header} ${Josa.r(title_tag, '을/를')} 위한 약속&#8221;` 
+        document.getElementById("pledges_message").innerHTML = title
     }
 
 }
