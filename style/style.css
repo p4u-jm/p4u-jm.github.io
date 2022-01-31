@@ -239,8 +239,12 @@ nav img {
 }
 
 .link_website {
-    margin: 20px;
-    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .link_website a {
@@ -250,6 +254,7 @@ nav img {
     padding: 15px;
     margin: 20px;
     border-radius: 10px;
+    line-height: 180%;
 }
 
 .links div {
