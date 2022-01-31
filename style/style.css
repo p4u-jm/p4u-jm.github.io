@@ -184,8 +184,18 @@ nav img {
     /* padding: 5px; */
 }
 
+.pledge_location {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #0B68B3;
+
+    font-size: x-large;
+    font-weight: bold;
+}
+
 .pledge_title {
-    margin-top: 25px;
+    margin-top: 15px;
     margin-bottom: 25px;
     margin-left: 15px;
     margin-right: 15px;

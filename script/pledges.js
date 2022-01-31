@@ -2,13 +2,15 @@ class Pledge {
     constructor(
         header,
         category,
+        location,
         title,	
         description,	
         website_url,
         image_name,	
         youtube_url	) {
             this.header = header	
-            this.category = category	
+            this.category = category
+            this.location = location	
             this.title = title
             this.description = description	
             this.website_url = website_url
@@ -40,7 +42,8 @@ const fetchData = new Promise((resolve, reject) => {
                         item[3].replace('\"', '').replace('\"', '').trim(), 
                         item[4].replace('\"', '').replace('\"', '').trim(),
                         item[5].replace('\"', '').replace('\"', '').trim(),
-                        item[6].replace('\"', '').replace('\"', '').trim()
+                        item[6].replace('\"', '').replace('\"', '').trim(),
+                        item[7].replace('\"', '').replace('\"', '').trim()
                     )
 
                     pledges.push(pledge)

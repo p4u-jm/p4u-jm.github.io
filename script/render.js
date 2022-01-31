@@ -93,6 +93,9 @@ const renderBody = (selected_tag) => {
         let website_url = ( pledge.website_url.trim() !== "") ? pledge.website_url : "#"
 
         element_child = element_child + `
+            <div class="pledge_location">    
+                ${pledge.location}
+            </div>
             <div class="pledge_title">    
                 ${pledge.title}
             </div>
