@@ -22,8 +22,9 @@ const renderNav = (selected_tag) => {
         categories.push(pledge.category)
     })
     
-    let tags = new Set(categories.filter(category => category !== undefined  &&  category !== ""))
-
+    var tags = new Set(categories.filter(category => category !== undefined  &&  category !== ""))
+    console.log(tags)
+    tags = Array.from(tags).sort()
     console.log(tags)
 
     document.getElementById("tags").innerHTML = renderTags(tags, selected_tag)

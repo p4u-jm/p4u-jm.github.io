@@ -66,9 +66,9 @@ nav {
 }
 
 #tags {
-    /* white-space:nowrap;
-    overflow:auto;   */
-    /* margin: 10px; */
+    white-space:nowrap;
+    overflow:auto;   
+    margin: 10px;
 }
 
 #tags button {
@@ -77,7 +77,7 @@ nav {
     display: inline-block;
     padding: 15px 20px;
     border-radius: 15px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); */
     text-decoration: none;
     /* font-weight: 600; */
     font-size: large;
