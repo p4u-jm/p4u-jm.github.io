@@ -28,6 +28,7 @@ const renderNav = (selected_tag) => {
     console.log(tags)
 
     document.getElementById("tags").innerHTML = renderTags(tags, selected_tag)
+    document.getElementById("pledges_gotop_tags").innerHTML = renderTagsStatic(tags)
 }
 
 const renderTags = (tags, selected_tag) => {
@@ -38,6 +39,18 @@ const renderTags = (tags, selected_tag) => {
         let css_class = ( tag === selected_tag ) ? "tag_selected" : "tag"
         
         element_child = `<button class="${css_class}" onclick="selectTag('${tag}')">${tag}</button>`
+        element_html = element_html + element_child
+    })
+    
+    return element_html
+}
+
+const renderTagsStatic = (tags) => {
+    var element_html = ""
+
+    tags.forEach( tag => {
+        var element_child = ""
+        element_child = `<span>#${tag}</button> `
         element_html = element_html + element_child
     })
     
@@ -155,4 +168,8 @@ const expandPledge = (index) => {
 
     element = document.getElementById("more_" + index)
     element.style.display = "none"
+}
+
+const reloadPage = () => {
+    location.href = "./index.html"
 }
