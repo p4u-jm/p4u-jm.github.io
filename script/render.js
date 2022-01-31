@@ -36,7 +36,7 @@ const renderTags = (tags, selected_tag) => {
     tags.forEach( tag => {
         var element_child = ""
         let css_class = ( tag === selected_tag ) ? "tag_selected" : "tag"
-        // let tag_display = tag.trim() === "" ? "모두" : tag
+        
         element_child = `<button class="${css_class}" onclick="selectTag('${tag}')">${tag}</button>`
         element_html = element_html + element_child
     })

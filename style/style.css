@@ -35,7 +35,7 @@ header {
 
 header .title {
     font-weight: bold;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 header .subtitle {
@@ -50,17 +50,28 @@ header .subtitle {
 
 nav {
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     line-height: 180%;
-    padding: 15px; 
+    /* padding: 15px;  */
     border-bottom-width: 1px;
     border-bottom-style: dotted;
     border-bottom-color: #cccccc;
 }
 
+nav div {
+    /* position: relative; */
+    /* display: inline-block; */
+}
+
+nav img {
+    width: 20px;
+    opacity: 0.75;
+}
+
 #tags {
-    white-space:nowrap;
-    overflow:auto;   
+    /* width: 100%; */
+    white-space: nowrap;
+    overflow: auto;   
     margin: 10px;
 }
 
@@ -69,12 +80,12 @@ nav {
     border: none;
     display: inline-block;
     padding: 10px 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); */
     text-decoration: none;
     /* font-weight: 600; */
     font-size: large;
-    font-weight: bold;
+    /* font-weight: bold; */
     transition: 0.25s;
 
     margin: 5px;
@@ -118,7 +129,7 @@ nav {
 
 #pledges_message {
     text-align: center;
-    margin: 10px;
+    margin-top: 40px;
     padding: 20px;
     font-size: xx-large;
     font-weight: bold;
@@ -164,7 +175,6 @@ nav {
 
 .pledge_more img {
     width: 20px;
-    opacity: 0.75;
 }
 
 .links {
