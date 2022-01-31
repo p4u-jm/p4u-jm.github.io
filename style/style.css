@@ -87,7 +87,8 @@ nav img {
 #tags {
     /* width: 100%; */
     white-space: nowrap;
-    overflow: auto;   
+    overflow: auto; 
+      
     margin: 10px;
 }
 
@@ -129,7 +130,8 @@ nav img {
 
 
 .pledge {
-    margin: 10px;
+    margin: 20px;
+    padding-bottom: 25px;
     /* padding: 0px; */
     background-color: white;
 
@@ -209,6 +211,7 @@ nav img {
 
 .pledge_more {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .pledge_more img {
