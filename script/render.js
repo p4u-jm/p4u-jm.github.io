@@ -23,10 +23,8 @@ const renderNav = (selected_tag) => {
     })
     
     var tags = new Set(categories.filter(category => category !== undefined  &&  category !== ""))
-    console.log(tags)
     tags = Array.from(tags).sort()
-    console.log(tags)
-
+    
     document.getElementById("tags").innerHTML = renderTags(tags, selected_tag)
     document.getElementById("pledges_gotop_tags").innerHTML = renderTagsStatic(tags)
 }
