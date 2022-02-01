@@ -86,21 +86,23 @@ const renderBody = (selected_tag) => {
     filterPledges(selected_tag).forEach(pledge => {
 
         var element_child = ""
-        element_child = `<div class="pledge" id="pledge_${index_element}" onclick="expandPledge(${index_element})">`
+        element_child = `<div class="pledge" id="pledge_${index_element}">`
 
         let website_url = ( pledge.website_url.trim() !== "") ? pledge.website_url : "#"
 
         element_child = element_child + `
-            <div class="pledge_location">    
-                ${pledge.location}
+            <div onclick="expandPledge(${index_element})">
+                <div class="pledge_location">    
+                    ${pledge.location}
+                </div>
+                <div class="pledge_title">    
+                    ${pledge.title}
+                </div>
+                <div class="pledge_description">
+                    ${pledge.description}
+                </div>
             </div>
-            <div class="pledge_title">    
-                ${pledge.title}
-            </div>
-            <div class="pledge_description">
-                ${pledge.description}
-            </div>
-            <div class="pledge_more" id="more_${index_element}">
+            <div class="pledge_more" id="more_${index_element}" onclick="expandPledge(${index_element})">
                 <img src="./img/plus.png" alt="아래로 화살표" />
             </div>
             `
@@ -113,6 +115,7 @@ const renderBody = (selected_tag) => {
                 <div class="link_website">
                     <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
                         내용 더 보기
+                        <img src="./img/outlink.png" />
                     </a>
                 </div>
                 `
@@ -125,7 +128,7 @@ const renderBody = (selected_tag) => {
 
             element_child = element_child + `
                 <div>
-                    <img src="./img/cards/${pledge.image_name}" />
+                    <img src="${pledge.image_name}" />
                 </div>
                 `
         }
@@ -142,7 +145,14 @@ const renderBody = (selected_tag) => {
                 `
         }
 
-        element_child = element_child + `</div>`
+
+        element_child = element_child + `
+                <div class="pledge_fold" onclick="foldPledge(${index_element})">
+                    <img src="./img/arrow_up.png" alt="접기 화살표" />
+                    접기
+                </div>
+            </div>
+            `
         element_child = element_child + `</div>`
 
         element_html = element_html + element_child
@@ -190,6 +200,24 @@ const expandPledge = (index) => {
     element = document.getElementById("more_" + index)
     element.style.display = "none"
 
+    document.getElementById('pledge_' + index).scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+const foldPledge = (index) => {
+    var element = document.getElementById("link_" + index)
+    
+    if (element) {
+        element.style.display = "none"
+        console.log(element)
+    }
+    
+    element = document.getElementById("more_" + index)
+    
+    if (element) {
+        element.style.display = "block"
+        console.log(element)
+    }
+    
     document.getElementById('pledge_' + index).scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 

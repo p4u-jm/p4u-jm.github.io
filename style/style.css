@@ -199,6 +199,12 @@ nav img {
     line-height: 180%;
 }
 
+.link_website a img {
+    width: 15px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
 .links div {
     text-align: center;
     margin-top: 15px;
@@ -215,6 +221,18 @@ nav img {
     width: 100%;
     max-width: 950px;
     height: 320px;
+}
+
+.pledge_fold {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pledge_fold img {
+    width: 15px;
+    opacity: 0.35;
+    margin-right: 5px;
 }
 
 #pledges_gotop {
