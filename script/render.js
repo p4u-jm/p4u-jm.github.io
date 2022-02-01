@@ -112,7 +112,7 @@ const renderBody = (selected_tag) => {
             element_child = element_child + `
                 <div class="link_website">
                     <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
-                        자세한 정보
+                        내용 더 보기
                     </a>
                 </div>
                 `
