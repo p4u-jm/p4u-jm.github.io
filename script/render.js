@@ -114,7 +114,7 @@ const renderBody = (selected_tag) => {
             element_child = element_child + `
                 <div class="link_website">
                     <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
-                        민주당 홈페이지에서 확인하기
+                        자세한 정보
                     </a>
                 </div>
                 `
