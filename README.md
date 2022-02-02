@@ -7,6 +7,7 @@
 ### 이미지 출처
 - https://ko.wikipedia.org/wiki/페이스북#/media/파일:Facebook_f_logo_(2019).svg
 - https://ko.wikipedia.org/wiki/카카오톡#/media/파일:KakaoTalk_logo.svg
+- https://ko.wikipedia.org/wiki/텔레그램#/media/파일:Telegram_2019_Logo.svg
 
 - https://www.flaticon.com/free-icon/upload_130906
 - https://www.flaticon.com/free-icon/plus_1828817

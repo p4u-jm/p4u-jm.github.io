@@ -15,7 +15,14 @@ const shareKakaoTalk = () => {
     })
 }
 
+const shareTelegram = () => {
+    let url = encodeURIComponent(window.location.href)
+    let title = encodeURIComponent("나를 위한 약속 from 이재명")
+    window.open("https://telegram.me/share/url?url=" + url + "&text=" + title, "_blank");
+}
+
 const shareLink = () => {
     navigator.clipboard.writeText(window.location.href);
     alert("주소가 복사되었습니다 : " + window.location.href);
 }
+
