@@ -263,7 +263,9 @@ nav img {
 }
 
 footer {
+    text-align: center;
     margin-top: 15px;
+    margin-bottom: 15px;
     padding-left: 20px;
     padding-right: 15px;
     font-size: small;
@@ -271,6 +273,10 @@ footer {
     border-top-style: dotted;
     border-top-color: lightgray;
     color: rgb(112, 112, 112);
+}
+
+footer h4 {
+    margin-top: 15px;
 }
 
 footer a {
@@ -289,4 +295,18 @@ footer .sharing {
 footer .sharing img {
     padding:15px;
     width: 32px;
+}
+
+footer .credit img {
+    width: 45px;
+    border-radius: 50%;   
+    margin-top: 15px;
+}
+
+footer .credit a {
+    text-decoration: none;
+}
+
+footer .credit {
+    margin-bottom: 25px;
 }
