@@ -164,7 +164,7 @@ const renderBody = (selected_tag) => {
 }
 
 const selectTag = (tag) => {
-    let element = document.getElementById('pledges_message')
+    element = document.getElementById('pledges_message')
     scrollToElement(element)
     render(tag)
 }
