@@ -1,5 +1,5 @@
 const shareFacebook = () => {
-
+    window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href), "_blank");
 }
 
 Kakao.init('c462c25f06813a2fa3bafcb3f80c77e1');
