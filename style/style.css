@@ -56,8 +56,8 @@ nav img {
 }
 
 #tags {
-    white-space: nowrap;
-    overflow: auto; 
+    /* white-space: nowrap;
+    overflow: auto;  */
     margin: 10px;
 }
 
@@ -66,17 +66,17 @@ nav img {
     display: inline-block;
     border: none;
     padding: 10px 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-decoration: none;
     font-size: large;
     transition: 0.25s;
-    margin: 5px;
-    margin-bottom: 20px;
+    margin: 3px;
+    /* margin-bottom: 20px; */
 }
 
 .tag {
     color: black;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(247, 247, 247);
 }
 
 .tag:hover {
