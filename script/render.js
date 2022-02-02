@@ -164,12 +164,13 @@ const renderBody = (selected_tag) => {
 }
 
 const selectTag = (tag) => {
-    document.getElementById('pledges_message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    let element = document.getElementById('pledges_message')
+    scrollToElement(element)
     render(tag)
 }
 
 const moveToTop = () => {
-    document.getElementById('header').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
     render(tag)
 }
 
@@ -200,7 +201,8 @@ const expandPledge = (index) => {
     element = document.getElementById("more_" + index)
     element.style.display = "none"
 
-    document.getElementById('pledge_' + index).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element = document.getElementById('pledge_' + index)
+    scrollToElement(element)
 }
 
 const foldPledge = (index) => {
@@ -217,10 +219,16 @@ const foldPledge = (index) => {
         element.style.display = "block"
         console.log(element)
     }
-    
-    document.getElementById('pledge_' + index).scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    element = document.getElementById('pledge_' + index)
+    scrollToElement(element)
 }
 
 const reloadPage = () => {
     location.href = "./index.html"
+}
+
+const scrollToElement = (element) => {
+    let top = element.offsetTop
+    window.scrollTo({top: top, left: 0, behavior: 'smooth'})
 }
