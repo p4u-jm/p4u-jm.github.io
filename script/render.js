@@ -229,6 +229,11 @@ const reloadPage = () => {
 }
 
 const scrollToElement = (element) => {
-    let top = element.offsetTop
-    window.scrollTo({top: top, left: 0, behavior: 'smooth'})
+
+    if (window.safari !== undefined) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+        let top = element.offsetTop
+        window.scrollTo({top: top, left: 0, behavior: 'smooth'})
+    }
 }
