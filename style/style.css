@@ -263,8 +263,9 @@ nav img {
 }
 
 footer {
-    margin-top: 55px;
-    padding: 35px;
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 15px;
     font-size: small;
     border-top-width: 1px;
     border-top-style: dotted;
@@ -280,12 +281,12 @@ footer a:hover {
     font-weight: bold;
 }
 
-footer .socialmedia {
+footer .sharing {
     text-align: center;
     margin: 5px;
 }
 
-footer .socialmedia img {
-    margin: 15px;
+footer .sharing img {
+    padding:15px;
     width: 32px;
 }

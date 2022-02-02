@@ -10,3 +10,4 @@
 
 - https://www.flaticon.com/free-icon/upload_130906
 - https://www.flaticon.com/free-icon/plus_1828817
+- https://www.flaticon.com/free-icon/link_455893

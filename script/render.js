@@ -229,7 +229,6 @@ const reloadPage = () => {
 }
 
 const scrollToElement = (element) => {
-
     if (window.safari !== undefined) {
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } else {
