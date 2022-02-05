@@ -167,11 +167,17 @@ const selectTag = (tag) => {
     element = document.getElementById('pledges_message')
     scrollToElement(element)
     render(tag)
+
+    console.log("selected category: " + tag)
+    gtag('event', '카테고리 선택', {
+        'event_category': '카테고리',
+        'event_lavel': `${tag}`
+    })
 }
 
 const moveToTop = () => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
-    render(tag)
+    // render(tag)
 }
 
 const expandPledge = (index) => {
@@ -203,6 +209,20 @@ const expandPledge = (index) => {
 
     element = document.getElementById('pledge_' + index)
     scrollToElement(element)
+
+    element_title = element.getElementsByClassName('pledge_title')[0]
+
+    if (element_title) {
+        let title = element_title.innerText
+        // console.log(element_title)
+        // console.log(title)
+        console.log("selected pledge: " + title)
+    
+        gtag('event', '세부공약 선택', {
+            'event_category': '세부공약',
+            'event_lavel': `${title}`
+        })
+    }
 }
 
 const foldPledge = (index) => {
@@ -210,14 +230,14 @@ const foldPledge = (index) => {
     
     if (element) {
         element.style.display = "none"
-        console.log(element)
+        // console.log(element)
     }
     
     element = document.getElementById("more_" + index)
     
     if (element) {
         element.style.display = "block"
-        console.log(element)
+        // console.log(element)
     }
 
     element = document.getElementById('pledge_' + index)
