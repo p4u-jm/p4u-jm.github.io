@@ -55,6 +55,13 @@ nav img {
     opacity: 0.75;
 }
 
+nav .guide {
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: left;
+    color:rgb(68, 68, 68);
+}
+
 #tags {
     /* white-space: nowrap;
     overflow: auto;  */
