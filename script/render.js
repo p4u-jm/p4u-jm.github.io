@@ -34,7 +34,14 @@ const renderTags = (tags, selected_tag) => {
 
     tags.forEach( tag => {
         var element_child = ""
-        let css_class = ( tag === selected_tag ) ? "tag_selected" : "tag"
+        var css_class = "tag"
+
+        if ( tag === selected_tag ) {
+            css_class = "tag_selected"
+        }
+        // else if (tag == "MZ세대1" || tag == "MZ세대2" || tag == "MZ세대3" || tag == "MZ세대4" || tag == "MZ세대5" || tag == "MZ세대1" || tag == "우리 지역") {
+        //     css_class = "tag_special"
+        // }
         
         element_child = `<button class="${css_class}" onclick="selectTag('${tag}')">${tag}</button>`
         element_html = element_html + element_child

@@ -92,6 +92,18 @@ nav .guide {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
+.tag_special {
+    font-weight: bold;
+    color: rgb(255, 0, 242);
+    background-color: rgb(247, 247, 247);
+}
+
+.tag_special:hover {
+    color: black;
+    background-color: darkgray;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
 .tag_selected {
     background-color: #00A0E2;
     color: white;
