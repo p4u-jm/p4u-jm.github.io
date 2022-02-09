@@ -2,7 +2,7 @@
 
 body {
     font-family: "Noto Sherif KR", sans-serif !important;
-    background: #ffffff;
+    background: #f6f6f6;
 	border-style: none;
 	margin: auto;
 	max-width: 750px;
@@ -11,12 +11,11 @@ body {
 
 
 header {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
     margin-top: 5px;
     margin-bottom: 15px;
     padding: 15px;
-    background-color: white;
     color: #0042A1;
 }
 
@@ -38,16 +37,14 @@ header .title {
 header .subtitle {
     font-weight: bold;
     font-size: large;
-    color: darkgray;
+    color: rgb(99, 99, 99);
 }
 
 nav {
     margin-top: 5px;
     margin-bottom: 5px;
     line-height: 180%;
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
-    border-bottom-color: #cccccc;
+    
 }
 
 nav img {
@@ -65,30 +62,30 @@ nav .guide {
 #tags {
     /* white-space: nowrap;
     overflow: auto;  */
-    margin: 10px;
+    margin: 5px;
 }
 
 #tags button {
     position: relative;
     display: inline-block;
     border: none;
-    padding: 10px 10px;
-    border-radius: 5px;
+    padding: 10px 12px 10px 12px;
     text-decoration: none;
-    font-size: large;
+    font-size: medium;
     transition: 0.25s;
-    margin: 3px;
-    /* margin-bottom: 20px; */
+    margin: 5px 4px 5px 4px;
+
+    border-radius: 50vh;
 }
 
 .tag {
     color: black;
-    background-color: rgb(247, 247, 247);
+    background-color: #ffffff;
 }
 
 .tag:hover {
     color: black;
-    background-color: darkgray;
+    background-color: #009ee281;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -110,92 +107,89 @@ nav .guide {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-
-.pledge {
-    margin: 20px;
-    padding-bottom: 25px;
-    background-color: white;
-    border: none;
-    padding: 5px 0px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    transition: 0.25s;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(112, 110, 110);
-}
-
 #pledges_message {
     text-align: center;
     padding-top: 100px;
     padding-bottom: 100px;
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: normal;
     color: rgb(68, 68, 68);
     line-height: 200%;
-
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
-    border-bottom-color: #cccccc;
 }
 
 #pledges_message span {
     color: #00A0E2;
     font-weight: bolder;
+    font-size: xx-large;
+}
+
+.pledge {
+    margin: 15px;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: 0.25s;
+}
+
+.pledge_expandable {
+    padding: 5px;
+    margin: 5px;
+}
+ 
+.pledge_intro {
+    padding: 10px;
+    margin: 5px;
+}
+
+.pledge_poster {
+    float: inline-start;
+    width: 50px;
+}
+
+.pledge_poster img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.pledge_text {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
 }
 
 .pledge_location {
-    margin-top: 15px;
-    margin-bottom: 10px;
-    text-align: center;
     color: #0B68B3;
     font-size: x-large;
     font-weight: bold;
 }
 
 .pledge_title {
-    margin-top: 15px;
-    margin-bottom: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-bottom: 5px;
+    color: black;
     font-size: x-large;
     font-weight: bold;
-    text-align: center;
-}
-
-.pledge_title a:hover {
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
-    border-bottom-color: #cccccc;
 }
 
 .pledge_description {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-    text-align: center;
-    line-height: 180%;
-}
-
-.pledge_description {
+    margin-top: 15px; 
+    font-size: large;
+    line-height: 150%;
     color: rgb(112, 110, 110);   
 }
 
 .pledge_more {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .pledge_more img {
     width: 20px;
+    height: 20px;
     opacity: 0.55;
 }
 
 .links {
     display: none;
-    border-top-width: 1px;
-    border-top-style: dotted;
-    border-top-color: #cccccc;
     transition: 0.25s;
 }
 
@@ -233,7 +227,6 @@ nav .guide {
 .links img {
     width: 100%;
     max-width: 950px;
-    /* height: 320px; */
 }
 
 .links iframe {
@@ -256,7 +249,7 @@ nav .guide {
 
 #pledges_gotop {
     text-align: center;
-    margin: 35px;
+    margin: 35px 15px 35px 15px ;
     padding: 10px;
     border-width: 1px;
     border-style: dotted;
@@ -288,9 +281,7 @@ footer {
     padding-left: 20px;
     padding-right: 15px;
     font-size: small;
-    border-top-width: 1px;
-    border-top-style: dotted;
-    border-top-color: lightgray;
+    
     color: rgb(112, 112, 112);
 }
 

@@ -39,9 +39,6 @@ const renderTags = (tags, selected_tag) => {
         if ( tag === selected_tag ) {
             css_class = "tag_selected"
         }
-        // else if (tag == "MZ세대1" || tag == "MZ세대2" || tag == "MZ세대3" || tag == "MZ세대4" || tag == "MZ세대5" || tag == "MZ세대1" || tag == "우리 지역") {
-        //     css_class = "tag_special"
-        // }
         
         element_child = `<button class="${css_class}" onclick="selectTag('${tag}')">${tag}</button>`
         element_html = element_html + element_child
@@ -98,35 +95,32 @@ const renderBody = (selected_tag) => {
         let website_url = ( pledge.website_url.trim() !== "") ? pledge.website_url : "#"
 
         element_child = element_child + `
-            <div onclick="expandPledge(${index_element})">
-                <div class="pledge_location">    
-                    ${pledge.location}
+            <div class="pledge_expandable" onclick="expandPledge(${index_element})">
+                <div class="pledge_intro">
+                    <!--
+                    <div class="pledge_poster">
+                        <img src="${pledge.image_name}" />
+                    </div>
+                    -->
+                    <div class="pledge_text">
+                        <div class="pledge_location">    
+                            ${pledge.location}
+                        </div>
+                        <div class="pledge_title">    
+                            ${pledge.title}
+                        </div>
+                        <div class="pledge_description">
+                            ${pledge.description}
+                        </div>
+                    </div>
                 </div>
-                <div class="pledge_title">    
-                    ${pledge.title}
+                <div class="pledge_more" id="more_${index_element}" onclick="expandPledge(${index_element})">
+                    <img src="./img/plus.png" alt="아래로 화살표" />
                 </div>
-                <div class="pledge_description">
-                    ${pledge.description}
-                </div>
-            </div>
-            <div class="pledge_more" id="more_${index_element}" onclick="expandPledge(${index_element})">
-                <img src="./img/plus.png" alt="아래로 화살표" />
             </div>
             `
 
         element_child = element_child + `<div class="links" id="link_${index_element}" >`
-
-        if ( pledge.website_url.trim() !== "") {
-
-            element_child = element_child + `
-                <div class="link_website">
-                    <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
-                        내용 더 보기
-                        <img src="./img/outlink.png" />
-                    </a>
-                </div>
-                `
-        }
 
         if ( pledge.image_name.trim() !== "") {
 
@@ -152,6 +146,17 @@ const renderBody = (selected_tag) => {
                 `
         }
 
+        if ( pledge.website_url.trim() !== "") {
+
+            element_child = element_child + `
+                <div class="link_website">
+                    <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
+                        내용 더 보기
+                        <img src="./img/outlink.png" />
+                    </a>
+                </div>
+                `
+        }
 
         element_child = element_child + `
                 <div class="pledge_fold" onclick="foldPledge(${index_element})">
@@ -221,8 +226,7 @@ const expandPledge = (index) => {
 
     if (element_title) {
         let title = element_title.innerText
-        // console.log(element_title)
-        // console.log(title)
+        
         console.log("selected pledge: " + title)
     
         gtag('event', '세부공약 선택', {
