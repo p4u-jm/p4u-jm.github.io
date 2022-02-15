@@ -2,7 +2,7 @@
 
 body {
     font-family: "Noto Sherif KR", sans-serif !important;
-    background: #f6f6f6;
+    background: #ffffff;
 	border-style: none;
 	margin: auto;
 	max-width: 750px;
@@ -69,7 +69,7 @@ nav .guide {
     position: relative;
     display: inline-block;
     border: none;
-    padding: 10px 12px 10px 12px;
+    padding: 8px 12px 8px 12px;
     text-decoration: none;
     font-size: medium;
     transition: 0.25s;
@@ -79,13 +79,13 @@ nav .guide {
 }
 
 .tag {
-    color: black;
-    background-color: #ffffff;
+    color: #3982C1;
+    background-color: #F2F9FE;
 }
 
 .tag:hover {
-    color: black;
-    background-color: #009ee281;
+    color: #2C679D;
+    background-color: #E3F1FD;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -126,9 +126,16 @@ nav .guide {
 .pledge {
     margin: 15px;
     background-color: white;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px 5px #F3F3F4;
     border-radius: 15px;
+    border-color: #F3F3F4;
+    border-width: 1px;
+    border-style: solid;
     transition: 0.25s;
+}
+
+.pledge:hover {
+    background-color: #E3F1FD;
 }
 
 .pledge_expandable {
@@ -259,7 +266,7 @@ nav .guide {
 }
 
 #pledges_gotop:hover {
-    background-color: lightgray;
+    background-color: #E3F1FD;
 }
 
 #pledges_gotop img {
