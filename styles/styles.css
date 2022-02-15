@@ -28,16 +28,31 @@ header .title {
     font-size: x-large;
     color: #0042A1;
 
-    border-left-width: 5px;
+    /* border-left-width: 5px;
     border-left-style: solid;
     border-left-color: #0042A1;
-    padding-left: 10px;
+    padding-left: 10px; */
+}
+
+header img.logo {
+    /* position: fixed; */
+    margin-right: 8px;
+    width: 65px;
+    height: 65px;
+    vertical-align: middle;
 }
 
 header .subtitle {
     font-weight: bold;
     font-size: large;
     color: rgb(99, 99, 99);
+}
+
+header .charnum {
+    font-weight: bolder;
+    font-size: x-large;
+    color: #F8D548;
+    -webkit-text-stroke: 1px #000
 }
 
 nav {
@@ -52,14 +67,61 @@ nav img {
     opacity: 0.75;
 }
 
-nav .guide {
-    margin-left: 15px;
-    margin-right: 15px;
-    text-align: left;
-    color:rgb(68, 68, 68);
+nav .sections {
+    margin-bottom: 25px;
+    text-align: center;
+    background-color: #E3F1FD;
+    text-align: center;
+
+    width: 100%;
+    border-radius: 5px;
+
+    font-weight: bold;
+    font-size: large;
+}
+
+nav .sections div {
+
+    position: relative;
+    display: inline-block;
+
+    padding: 5px;
+    width: 40%;
+    text-align: center;
+
+    transition: 0.25s;
+}
+
+nav .section_selected {
+    color: white;
+    background-color: #3982C1;
+
+    box-shadow: 3px 3px 3px 3px lightgray;
+    border-radius: 10px;
+
+    transform: translate(0px, -2px);
+}
+
+nav .section_selected:hover {
+    box-shadow: 5px 5px 5px 5px lightgray;
+
+    transform: translate(0px, -3px);
+}
+
+nav .section_normal {
+    color: black;
+    transform: translate(0px, 2px);
+}
+
+
+nav .section_normal:hover {
+    color: black;
+    transform: translate(0px, -1px);
 }
 
 #tags {
+    clear: both;
+    /* margin-top: 25px; */
     /* white-space: nowrap;
     overflow: auto;  */
     margin: 5px;
@@ -126,7 +188,7 @@ nav .guide {
 .pledge {
     margin: 15px;
     background-color: white;
-    box-shadow: 5px 5px 5px 5px #F3F3F4;
+    box-shadow: 0 5px 5px #F3F3F4;
     border-radius: 15px;
     border-color: #F3F3F4;
     border-width: 1px;

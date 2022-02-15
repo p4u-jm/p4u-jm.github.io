@@ -1,6 +1,5 @@
 var pledges = []
 
-
 const filterPledges = (tag) => {
     if (tag === "") {
         return []
@@ -23,7 +22,8 @@ const renderNav = (selected_tag) => {
     })
     
     var tags = new Set(categories.filter(category => category !== undefined  &&  category !== ""))
-    tags = Array.from(tags).sort()
+    // tags = Array.from(tags).sort()
+    tags = Array.from(tags)
     
     document.getElementById("tags").innerHTML = renderTags(tags, selected_tag)
     document.getElementById("pledges_gotop_tags").innerHTML = renderTagsStatic(tags)
@@ -265,5 +265,38 @@ const scrollToElement = (element) => {
     } else {
         let top = element.offsetTop
         window.scrollTo({top: top, left: 0, behavior: 'smooth'})
+    }
+}
+
+const selectSection = (section) => {
+    var element_0 = document.getElementById("section_0")
+    var element_1 = document.getElementById("section_1")
+    var element_message = document.getElementById("gotop_message")
+
+    switch (section) {
+        case 0:
+            element_0.setAttribute("class", "section_selected")
+            element_1.setAttribute("class", "section_normal")
+            element_message.innerText = "관심분야를 선택하세요"
+            
+            fetchData("./data/pledges_interest.csv").then((successMessage) => {
+                console.log(successMessage)
+                render("")
+            })
+            
+            break
+        case 1:
+            element_0.setAttribute("class", "section_normal")
+            element_1.setAttribute("class", "section_selected")
+            element_message.innerText = "우리지역을 선택하세요"
+            
+            fetchData("./data/pledges_region.csv").then((successMessage) => {
+                console.log(successMessage)
+                render("")
+            })
+
+            break
+        default:
+            break
     }
 }

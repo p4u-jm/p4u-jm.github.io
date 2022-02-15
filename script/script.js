@@ -1,7 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
-    fetchData.then((successMessage) => {
-        console.log(successMessage)
-        render("")
-    })
+    selectSection(0)
 }, false)

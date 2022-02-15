@@ -19,8 +19,10 @@ class Pledge {
     }
 }
 
-const fetchData = new Promise((resolve, reject) => {
-    const url = "./data/pledges.csv"
+const fetchData = (url) => new Promise((resolve, reject) => {
+   //  const url = "./data/pledges_interest.csv"
+
+   pledges = []
 
     fetch(url, { mode: 'cors' })
     .then((response) => {                
