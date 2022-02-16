@@ -112,10 +112,10 @@ nav .section_selected:hover {
 }
 
 nav .section_normal {
-    color: black;
+    color: rgb(68, 68, 68);
     /* transform: translate(0px, 2px); */
 
-    border-color: rgb(99, 99, 99);
+    border-color: #F3F3F4;
     border-radius: 10px;
     border-width: 1px;
     border-style: solid;
@@ -125,6 +125,9 @@ nav .section_normal {
 nav .section_normal:hover {
     color: black;
     transform: translate(0px, -3px);
+
+    box-shadow: 3px 3px 3px 3px lightgray;
+    border-radius: 10px;
 }
 
 #tags {
