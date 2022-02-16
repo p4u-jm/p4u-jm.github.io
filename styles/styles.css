@@ -35,7 +35,6 @@ header .title {
 }
 
 header img.logo {
-    /* position: fixed; */
     margin-right: 1px;
     width: 28px;
     height: 28px;
@@ -59,8 +58,7 @@ header .charnum {
 nav {
     margin-top: 5px;
     margin-bottom: 5px;
-    line-height: 180%;
-    
+    line-height: 180%;   
 }
 
 nav img {
@@ -71,7 +69,6 @@ nav img {
 nav .sections {
     margin-bottom: 10px;
     text-align: center;
-    /* background-color: #E3F1FD; */
     text-align: center;
 
     width: 100%;
@@ -386,10 +383,30 @@ footer .sharing img {
 }
 
 footer .credit img {
-    width: 45px;
-    border-radius: 50%;   
+    width: 90%;
+    /* border-radius: 50%;    */
     margin-top: 15px;
 }
+
+footer .creators {
+    width: 100%;
+}
+
+footer .creator {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+}
+
+footer .name {
+    font-weight: bold;
+    font-size: large;
+}
+
+footer .thanks {
+    clear: both;
+}
+
 
 footer .credit a {
     text-decoration: none;
