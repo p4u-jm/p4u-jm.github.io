@@ -69,7 +69,7 @@ nav img {
 }
 
 nav .sections {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     text-align: center;
     /* background-color: #E3F1FD; */
     text-align: center;
@@ -99,15 +99,13 @@ nav .section_selected {
     color: white;
     background-color: rgb(99, 99, 99);;
 
-    box-shadow: 3px 3px 3px 3px lightgray;
+    box-shadow: 2px 2px 2px 2px lightgray;
     border-radius: 10px;
 
     /* transform: translate(0px, -2px); */
 }
 
 nav .section_selected:hover {
-    box-shadow: 5px 5px 5px 5px lightgray;
-
     transform: translate(0px, -3px);
 }
 
@@ -126,7 +124,7 @@ nav .section_normal:hover {
     color: black;
     transform: translate(0px, -3px);
 
-    box-shadow: 3px 3px 3px 3px lightgray;
+    box-shadow: 2px 2px 2px 2px lightgray;
     border-radius: 10px;
 }
 
