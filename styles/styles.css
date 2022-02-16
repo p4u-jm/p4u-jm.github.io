@@ -36,10 +36,11 @@ header .title {
 
 header img.logo {
     /* position: fixed; */
-    margin-right: 8px;
-    width: 65px;
-    height: 65px;
+    margin-right: 1px;
+    width: 28px;
+    height: 28px;
     vertical-align: middle;
+    transform: translate(0px, -3px);
 }
 
 header .subtitle {
@@ -53,6 +54,7 @@ header .charnum {
     font-size: x-large;
     color: #F8D548;
     -webkit-text-stroke: 1px #000
+    
 }
 
 nav {
