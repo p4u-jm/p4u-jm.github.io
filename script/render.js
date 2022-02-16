@@ -283,6 +283,11 @@ const selectSection = (section) => {
                 console.log(successMessage)
                 render("")
             })
+
+            gtag('event', '섹션전환', {
+                'event_category': '섹션',
+                'event_lavel': `관심분야`
+            })
             
             break
         case 1:
@@ -293,6 +298,11 @@ const selectSection = (section) => {
             fetchData("./data/pledges_region.csv").then((successMessage) => {
                 console.log(successMessage)
                 render("")
+            })
+
+            gtag('event', '섹션전환', {
+                'event_category': '섹션',
+                'event_lavel': `우리지역`
             })
 
             break
