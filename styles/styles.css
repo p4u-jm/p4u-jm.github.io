@@ -390,9 +390,11 @@ footer .credit img {
 
 footer .creators {
     width: 100%;
+
 }
 
 footer .creator {
+    vertical-align: top;
     position: relative;
     display: inline-block;
     width: 40%;
