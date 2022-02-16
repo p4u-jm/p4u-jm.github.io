@@ -54,7 +54,6 @@ header .charnum {
     font-size: x-large;
     color: #F8D548;
     -webkit-text-stroke: 1px #000
-    
 }
 
 nav {
@@ -72,7 +71,7 @@ nav img {
 nav .sections {
     margin-bottom: 25px;
     text-align: center;
-    background-color: #E3F1FD;
+    /* background-color: #E3F1FD; */
     text-align: center;
 
     width: 100%;
@@ -87,6 +86,8 @@ nav .sections div {
     position: relative;
     display: inline-block;
 
+    margin-left: 5px;
+    margin-right: 5px;
     padding: 5px;
     width: 40%;
     text-align: center;
@@ -96,12 +97,12 @@ nav .sections div {
 
 nav .section_selected {
     color: white;
-    background-color: #3982C1;
+    background-color: rgb(99, 99, 99);;
 
     box-shadow: 3px 3px 3px 3px lightgray;
     border-radius: 10px;
 
-    transform: translate(0px, -2px);
+    /* transform: translate(0px, -2px); */
 }
 
 nav .section_selected:hover {
@@ -112,13 +113,18 @@ nav .section_selected:hover {
 
 nav .section_normal {
     color: black;
-    transform: translate(0px, 2px);
+    /* transform: translate(0px, 2px); */
+
+    border-color: rgb(99, 99, 99);
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
 }
 
 
 nav .section_normal:hover {
     color: black;
-    transform: translate(0px, -1px);
+    transform: translate(0px, -3px);
 }
 
 #tags {
