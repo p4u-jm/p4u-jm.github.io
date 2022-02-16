@@ -53,7 +53,7 @@ header .charnum {
     font-weight: bolder;
     font-size: x-large;
     color: #F8D548;
-    -webkit-text-stroke: 1px #000
+    -webkit-text-stroke: 1px black;
 }
 
 nav {
