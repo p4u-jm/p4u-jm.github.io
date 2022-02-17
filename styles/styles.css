@@ -384,6 +384,7 @@ footer .sharing img {
 
 footer .credit img {
     width: 90%;
+    max-width: 120px;
     /* border-radius: 50%;    */
     margin-top: 15px;
 }
