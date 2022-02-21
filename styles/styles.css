@@ -106,7 +106,8 @@ nav .sections div {
 
 nav .section_selected {
     color: white;
-    background-color: rgb(99, 99, 99);;
+    /* background-color: rgb(99, 99, 99); */
+    background-color: black;
 
     box-shadow: 2px 2px 2px 2px lightgray;
     border-radius: 10px;
