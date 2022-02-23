@@ -185,6 +185,10 @@ const selectTag = (tag) => {
         'event_category': '카테고리',
         'event_lavel': `${tag}`
     })
+    gtag('event', `카테고리: ${tag}`, {
+        'event_category': '카테고리',
+        'event_lavel': `${tag}`
+    })
 }
 
 const moveToTop = () => {
@@ -230,6 +234,10 @@ const expandPledge = (index) => {
         console.log("selected pledge: " + title)
     
         gtag('event', '세부공약 선택', {
+            'event_category': '세부공약',
+            'event_lavel': `${title}`
+        })
+        gtag('event', `세부공약: ${title}`, {
             'event_category': '세부공약',
             'event_lavel': `${title}`
         })
@@ -288,6 +296,10 @@ const selectSection = (section) => {
                 'event_category': '섹션',
                 'event_lavel': `관심분야`
             })
+            gtag('event', '섹션전환: 관심분야', {
+                'event_category': '섹션',
+                'event_lavel': `관심분야`
+            })
             
             break
         case 1:
@@ -301,6 +313,10 @@ const selectSection = (section) => {
             })
 
             gtag('event', '섹션전환', {
+                'event_category': '섹션',
+                'event_lavel': `우리지역`
+            })
+            gtag('event', '섹션전환: 우리지역', {
                 'event_category': '섹션',
                 'event_lavel': `우리지역`
             })
