@@ -229,7 +229,7 @@ const expandPledge = (index) => {
     element_title = element.getElementsByClassName('pledge_title')[0]
     element_location = element.getElementsByClassName('pledge_location')[0]
 
-    if (element_title) {
+    if (element_title || element_location) {
         let title = element_title.innerText
         let location = element_location.innerText
         
