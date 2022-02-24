@@ -227,20 +227,24 @@ const expandPledge = (index) => {
     scrollToElement(element)
 
     element_title = element.getElementsByClassName('pledge_title')[0]
+    element_location = element.getElementsByClassName('pledge_location')[0]
 
     if (element_title) {
         let title = element_title.innerText
+        let location = element_location.innerText
         
-        console.log("selected pledge: " + title)
+        // console.log("selected pledge: " + title + location)
     
         gtag('event', '세부공약 선택', {
             'event_category': '세부공약',
             'event_lavel': `${title}`
         })
-        gtag('event', `세부공약: ${title}`, {
+        gtag('event', `세부공약: ${title} ${location}`, {
             'event_category': '세부공약',
-            'event_lavel': `${title}`
+            'event_lavel': `${title} ${location}`
         })
+
+        // console.log(`세부공약: ${title} ${location}`)
     }
 }
 
