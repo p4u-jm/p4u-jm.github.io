@@ -180,7 +180,7 @@ const selectTag = (tag) => {
     scrollToElement(element)
     render(tag)
 
-    console.log("selected category: " + tag)
+    // console.log("selected category: " + tag)
     gtag('event', '카테고리 선택', {
         'event_category': '카테고리',
         'event_lavel': `${tag}`
@@ -237,7 +237,7 @@ const expandPledge = (index) => {
     
         gtag('event', '세부공약 선택', {
             'event_category': '세부공약',
-            'event_lavel': `${title}`
+            'event_lavel': `${title} ${location}`
         })
         gtag('event', `세부공약: ${title} ${location}`, {
             'event_category': '세부공약',
