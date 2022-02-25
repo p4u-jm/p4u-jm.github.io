@@ -29,3 +29,10 @@
 - https://www.flaticon.com/free-icon/upload_130906
 - https://www.flaticon.com/free-icon/plus_1828817
 - https://www.flaticon.com/free-icon/link_455893
+
+
+## Docker building
+```zsh
+$ docker build -t static:latest .
+$ docker run -it --rm -p 3000:3000 static:latest
+```
