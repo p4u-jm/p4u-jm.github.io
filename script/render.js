@@ -97,11 +97,6 @@ const renderBody = (selected_tag) => {
         element_child = element_child + `
             <div class="pledge_expandable" onclick="expandPledge(${index_element})">
                 <div class="pledge_intro">
-                    <!--
-                    <div class="pledge_poster">
-                        <img src="${pledge.image_name}" />
-                    </div>
-                    -->
                     <div class="pledge_text">
                         <div class="pledge_location">    
                             ${pledge.location}
@@ -115,7 +110,7 @@ const renderBody = (selected_tag) => {
                     </div>
                 </div>
                 <div class="pledge_more" id="more_${index_element}" onclick="expandPledge(${index_element})">
-                    <img src="./img/plus.png" alt="아래로 화살표" />
+                    <img src="./img/plus.png" alt="더 자세한 내용 열어보기" />
                 </div>
             </div>
             `
@@ -129,7 +124,7 @@ const renderBody = (selected_tag) => {
 
             element_child = element_child + `
                 <div>
-                    <img src="${pledge.image_name}" />
+                    <img src="${pledge.image_name}" alt="${pledge.title} 설명 그림" />
                 </div>
                 `
         }
@@ -152,7 +147,7 @@ const renderBody = (selected_tag) => {
                 <div class="link_website">
                     <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
                         내용 더 보기
-                        <img src="./img/outlink.png" />
+                        <img src="./img/outlink.png" alt="내용 더 보기 링크 열기" />
                     </a>
                 </div>
                 `
@@ -160,7 +155,7 @@ const renderBody = (selected_tag) => {
 
         element_child = element_child + `
                 <div class="pledge_fold" onclick="foldPledge(${index_element})">
-                    <img src="./img/arrow_up.png" alt="접기 화살표" />
+                    <img src="./img/arrow_up.png" alt="공약 내용 간단히 보도록 접기" />
                     접기
                 </div>
             </div>
