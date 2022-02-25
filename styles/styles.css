@@ -150,11 +150,11 @@ nav .section_normal:hover {
     position: relative;
     display: inline-block;
     border: none;
-    padding: 8px 12px 8px 12px;
+    padding: 8px 10px 8px 10px;
     text-decoration: none;
     font-size: medium;
     transition: 0.25s;
-    margin: 5px 4px 5px 4px;
+    margin: 4px 4px 4px 4px;
 
     border-radius: 50vh;
 }
