@@ -31,7 +31,7 @@
 - https://www.flaticon.com/free-icon/link_455893
 
 
-## Docker building
+## Building Docker Container
 ```zsh
 $ docker build -t static:latest .
 $ docker run -it --rm -p 3000:3000 static:latest
