@@ -83,6 +83,9 @@ nav .sections {
     margin-bottom: 10px;
     text-align: center;
     text-align: center;
+    user-select: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
     width: 100%;
     border-radius: 5px;
@@ -95,6 +98,7 @@ nav .sections div {
 
     position: relative;
     display: inline-block;
+    user-select: none;
 
     margin-left: 5px;
     margin-right: 5px;
@@ -156,6 +160,8 @@ nav .section_normal:hover {
     font-size: medium;
     transition: 0.25s;
     margin: 4px 4px 4px 4px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
     border-radius: 50vh;
 }
@@ -221,6 +227,7 @@ nav .section_normal:hover {
 }
 
 .pledge_expandable {
+    cursor: pointer;
     padding: 5px;
     margin: 5px;
 }
@@ -328,6 +335,7 @@ nav .section_normal:hover {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    cursor: pointer;
 }
 
 .pledge_fold img {
@@ -345,6 +353,7 @@ nav .section_normal:hover {
     border-color: lightgray;
     transition: 0.25s;
     color: #00A0E2;
+    cursor: pointer;
 }
 
 #pledges_gotop:hover {

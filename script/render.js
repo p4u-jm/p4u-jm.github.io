@@ -26,7 +26,7 @@ const renderNav = (selected_tag) => {
     tags = Array.from(tags)
     
     document.getElementById("tags").innerHTML = renderTags(tags, selected_tag)
-    document.getElementById("pledges_gotop_tags").innerHTML = renderTagsStatic(tags)
+    // document.getElementById("pledges_gotop_tags").innerHTML = renderTagsStatic(tags)
 }
 
 const renderTags = (tags, selected_tag) => {
@@ -262,10 +262,6 @@ const foldPledge = (index) => {
     scrollToElement(element)
 }
 
-const reloadPage = () => {
-    location.href = "./index.html"
-}
-
 const scrollToElement = (element) => {
     if (window.safari !== undefined) {
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -284,7 +280,6 @@ const selectSection = (section) => {
         case 0:
             element_0.setAttribute("class", "section_selected")
             element_1.setAttribute("class", "section_normal")
-            element_message.innerText = "관심분야를 선택하세요"
             
             fetchData("./data/pledges_interest.csv").then((successMessage) => {
                 console.log(successMessage)
