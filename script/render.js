@@ -298,7 +298,6 @@ const selectSection = (section) => {
         case 1:
             element_0.setAttribute("class", "section_normal")
             element_1.setAttribute("class", "section_selected")
-            element_message.innerText = "우리지역을 선택하세요"
             
             fetchData("./data/pledges_region.csv").then((successMessage) => {
                 render("")
