@@ -282,7 +282,6 @@ const selectSection = (section) => {
             element_1.setAttribute("class", "section_normal")
             
             fetchData("./data/pledges_interest.csv").then((successMessage) => {
-                console.log(successMessage)
                 render("")
             })
 
@@ -302,7 +301,6 @@ const selectSection = (section) => {
             element_message.innerText = "우리지역을 선택하세요"
             
             fetchData("./data/pledges_region.csv").then((successMessage) => {
-                console.log(successMessage)
                 render("")
             })
 
