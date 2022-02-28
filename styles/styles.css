@@ -354,7 +354,6 @@ nav .section_normal:hover {
     border-style: dotted;
     border-color: lightgray;
     transition: 0.25s;
-    color: #00A0E2;
     cursor: pointer;
 }
 
@@ -442,4 +441,11 @@ footer .credit a {
 
 footer .credit {
     margin-bottom: 25px;
+}
+
+.label {
+    margin-top: -80px;
+    margin-bottom: 80px;
+    text-align: center;
+    color: #00A0E2;
 }

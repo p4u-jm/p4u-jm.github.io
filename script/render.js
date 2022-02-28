@@ -87,87 +87,89 @@ const renderBody = (selected_tag) => {
     var element_html = ""
     var index_element = 0
 
-    filterPledges(selected_tag).forEach(pledge => {
+    if (selected_tag) {
+        filterPledges(selected_tag).forEach(pledge => {
 
-        var element_child = ""
-        element_child = `<div class="pledge" id="pledge_${index_element}">`
+            var element_child = ""
+            element_child = `<div class="pledge" id="pledge_${index_element}">`
 
-        let website_url = ( pledge.website_url.trim() !== "") ? pledge.website_url : "#"
+            let website_url = ( pledge.website_url.trim() !== "") ? pledge.website_url : "#"
 
-        element_child = element_child + `
-            <div class="pledge_expandable" onclick="expandPledge(${index_element})">
-                <div class="pledge_intro">
-                    <div class="pledge_text">
-                        <div class="pledge_location">    
-                            ${pledge.location}
-                        </div>
-                        <div class="pledge_title">    
-                            ${pledge.title}
-                        </div>
-                        <div class="pledge_description">
-                            ${pledge.description}
+            element_child = element_child + `
+                <div class="pledge_expandable" onclick="expandPledge(${index_element})">
+                    <div class="pledge_intro">
+                        <div class="pledge_text">
+                            <div class="pledge_location">    
+                                ${pledge.location}
+                            </div>
+                            <div class="pledge_title">    
+                                ${pledge.title}
+                            </div>
+                            <div class="pledge_description">
+                                ${pledge.description}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="pledge_more" id="more_${index_element}" onclick="expandPledge(${index_element})">
-                    <img src="./img/plus.png" alt="더 자세한 내용 열어보기" />
-                </div>
-            </div>
-            `
-
-        element_child = element_child + `<div class="links" id="link_${index_element}" >`
-
-        if ( pledge.image_name.trim() !== "") {
-
-            let youtube_url_array  = pledge.youtube_url.split('/')
-            let youtube_key = youtube_url_array.pop()
-
-            element_child = element_child + `
-                <div>
-                    <img src="${pledge.image_name}" alt="${pledge.title} 설명 그림" />
+                    <div class="pledge_more" id="more_${index_element}" onclick="expandPledge(${index_element})">
+                        <img src="./img/plus.png" alt="더 자세한 내용 열어보기" />
+                    </div>
                 </div>
                 `
-        }
 
-        if ( pledge.youtube_url.trim() !== "") {
+            element_child = element_child + `<div class="links" id="link_${index_element}" >`
 
-            let youtube_url_array  = pledge.youtube_url.split('/')
-            let youtube_key = youtube_url_array.pop()
+            if ( pledge.image_name.trim() !== "") {
+
+                let youtube_url_array  = pledge.youtube_url.split('/')
+                let youtube_key = youtube_url_array.pop()
+
+                element_child = element_child + `
+                    <div>
+                        <img src="${pledge.image_name}" alt="${pledge.title} 설명 그림" />
+                    </div>
+                    `
+            }
+
+            if ( pledge.youtube_url.trim() !== "") {
+
+                let youtube_url_array  = pledge.youtube_url.split('/')
+                let youtube_key = youtube_url_array.pop()
+
+                element_child = element_child + `
+                    <div>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/${youtube_key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    `
+            }
+
+            if ( pledge.website_url.trim() !== "") {
+
+                element_child = element_child + `
+                    <div class="link_website">
+                        <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
+                            내용 더 보기
+                            <img src="./img/outlink.png" alt="내용 더 보기 링크 열기" />
+                        </a>
+                    </div>
+                    `
+            }
 
             element_child = element_child + `
-                <div>
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/${youtube_key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="pledge_fold" onclick="foldPledge(${index_element})">
+                        <img src="./img/arrow_up.png" alt="공약 내용 간단히 보도록 접기" />
+                        접기
+                    </div>
                 </div>
                 `
-        }
+            element_child = element_child + `</div>`
 
-        if ( pledge.website_url.trim() !== "") {
+            element_html = element_html + element_child
 
-            element_child = element_child + `
-                <div class="link_website">
-                    <a href="${pledge.website_url}" target="_blank" rel="noopener noreferrer">
-                        내용 더 보기
-                        <img src="./img/outlink.png" alt="내용 더 보기 링크 열기" />
-                    </a>
-                </div>
-                `
-        }
+            index_element++
+        })
 
-        element_child = element_child + `
-                <div class="pledge_fold" onclick="foldPledge(${index_element})">
-                    <img src="./img/arrow_up.png" alt="공약 내용 간단히 보도록 접기" />
-                    접기
-                </div>
-            </div>
-            `
-        element_child = element_child + `</div>`
-
-        element_html = element_html + element_child
-
-        index_element++
-    })
-
-    document.getElementById("pledges").innerHTML = element_html
+        document.getElementById("pledges").innerHTML = element_html
+    }
 }
 
 const selectTag = (tag) => {
