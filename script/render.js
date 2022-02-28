@@ -26,6 +26,7 @@ const renderNav = (selected_tag) => {
     tags = Array.from(tags)
     
     document.getElementById("tags").innerHTML = renderTags(tags, selected_tag)
+    document.getElementById("tags2").innerHTML = renderTags(tags, selected_tag)
     // document.getElementById("pledges_gotop_tags").innerHTML = renderTagsStatic(tags)
 }
 

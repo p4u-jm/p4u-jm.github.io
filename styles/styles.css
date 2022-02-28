@@ -143,7 +143,7 @@ nav .section_normal:hover {
     border-radius: 10px;
 }
 
-#tags {
+.tags {
     clear: both;
     /* margin-top: 25px; */
     /* white-space: nowrap;
@@ -151,7 +151,7 @@ nav .section_normal:hover {
     margin: 5px;
 }
 
-#tags button {
+.tags button {
     position: relative;
     display: inline-block;
     border: none;
@@ -445,7 +445,11 @@ footer .credit {
 
 .label {
     margin-top: -80px;
-    margin-bottom: 80px;
+    margin-bottom: 160px;
     text-align: center;
     color: #00A0E2;
+}
+
+#tags2 {
+    margin-top: 40px;;
 }
