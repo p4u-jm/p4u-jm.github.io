@@ -166,6 +166,10 @@ nav .section_normal:hover {
     border-radius: 50vh;
 }
 
+#tags2 {
+    margin-top: 40px;;
+}
+
 .tag {
     color: #3982C1;
     background-color: #F2F9FE;
@@ -224,6 +228,13 @@ nav .section_normal:hover {
 
 .pledge:hover {
     background-color: #E3F1FD;
+}
+
+.pledge_label {
+    margin-top: -80px;
+    margin-bottom: 160px;
+    text-align: center;
+    color: #00A0E2;
 }
 
 .pledge_expandable {
@@ -443,13 +454,3 @@ footer .credit {
     margin-bottom: 25px;
 }
 
-.label {
-    margin-top: -80px;
-    margin-bottom: 160px;
-    text-align: center;
-    color: #00A0E2;
-}
-
-#tags2 {
-    margin-top: 40px;;
-}
