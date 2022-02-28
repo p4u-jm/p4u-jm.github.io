@@ -230,6 +230,7 @@ nav .section_normal:hover {
     cursor: pointer;
     padding: 5px;
     margin: 5px;
+    -webkit-tap-highlight-color: transparent;
 }
  
 .pledge_intro {
@@ -276,6 +277,7 @@ nav .section_normal:hover {
 
 .pledge_more {
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .pledge_more img {
