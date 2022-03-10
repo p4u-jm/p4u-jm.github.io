@@ -10,6 +10,13 @@ body {
     word-break: keep-all;
 }
 
+.noti {
+    font-size: small;
+    color: #ffffff;
+    background-color: #0042A1;
+    padding: 15px;
+    line-height: 160%;
+}
 
 header {
     margin-left: 3px;
