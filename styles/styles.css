@@ -12,9 +12,10 @@ body {
 
 .noti {
     font-size: small;
-    color: #ffffff;
-    background-color: #0042A1;
+    color: black;
+    background-color: rgb(234, 234, 234);
     padding: 15px;
+    margin-top: 15px;
     line-height: 160%;
 }
 
